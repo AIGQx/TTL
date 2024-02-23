@@ -1,31 +1,30 @@
-
-
 body {
   margin: 0;
-  height: 100vh; /* Set body height to 100% of viewport height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  font-size: .8em;
+  font-family: system-ui, sans-serif;
 }
-/* header */
 header {
   position: fixed;
   top: 0;
   width: 75%;
-  z-index: 1000; /* Set a high z-index to ensure the navbar is on top of other content */
+  z-index: 1000;
 }
+
 nav {
-  background: linear-gradient(270deg,#11111b			, #181825		, #1e1e2e		);
+  align-items: center;
   animation: gradient-animation 33s ease infinite;
   background-size: 1000% 1000%;
+  background: linear-gradient(270deg, #11111b, #181825, #1e1e2e);
   border-radius: 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 10px;
 }
-
 
 nav ul {
   list-style: none;
@@ -33,44 +32,53 @@ nav ul {
   margin: 0;
   display: flex;
   align-items: center;
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 nav li.logo img {
   height: 100%;
   margin-left: 10%;
   margin-top: 2%;
-  width: 100%; 
-  max-width: 75px; 
-  border-radius: 80%;
-  /* Set the border style, width, and color */
-  border: 2px solid transparent;
-
-  /* Set the gradient for the border */
-  border-image: linear-gradient(to right, red, blue);
-
-  /* Ensure that the gradient covers the entire border */
-  border-image-slice: 1;
+  width: 100%;
+  max-width: 75px;
+  padding: 3px;
+  border-radius: 100%;
+  border-color: red;
+  box-sizing: border-box;
+  background-size: 400% 400%;
+  background: linear-gradient(45deg, rgb(195, 138, 239), rgb(115, 255, 155));
+  animation: profimg 3s ease infinite;
 }
+
+
+@keyframes profimg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
-@keyframes dash {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 10px 0; /* Adjust the distance between dots */
-  }
-}
+
 #background-container {
   position: fixed;
   top: 0;
@@ -78,14 +86,14 @@ nav li.logo img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1; 
+  z-index: -1;
 }
 
 #video-background {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  filter: blur(8px); 
+  object-fit: cover;
+  filter: blur(8px);
 }
 
 #overlay {
@@ -95,26 +103,53 @@ nav li.logo img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.998);
-  z-index: -1; 
-}
-.info-main{
-  background-color: rgba(102, 51, 153, 0.5);
-  color: wheat;
-}
-.container-body{
-    max-width: 60%;
-    margin: 0 auto;
-}
-#grid {
-  display: inline-grid;
-  background-color: red;
-  margin: 10px 1px 0;
-  border-radius: 10px;
+  z-index: -1;
 }
 
-@media (min-width: 400px) {
+.info-main {
+  background-color: rgb(110, 115, 141);
+  color:rgb(202, 211, 245);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.info-main:hover {
+  background-color: rgb(54, 58, 79);
+  color: #b8c0e0;
+  padding: 10px;
+  border-radius: 40px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+  transition:.4s;
+  cursor: pointer;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#grid {
+ display: flex;
+  background-color: rgb(42, 49, 66);
+  margin: 10px 1px 0;
+  border-radius: 10px;
+  justify-content: space-between;
+  width: 90%;
+}
+
+/* @media (min-width: 400px) {
   #grid {
-    grid-template-columns:1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
@@ -122,4 +157,4 @@ nav li.logo img {
   #grid {
     grid-template-columns: 1fr 1fr;
   }
-}
+} */
