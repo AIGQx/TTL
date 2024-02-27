@@ -18,37 +18,69 @@
     </video>
     <div id="overlay"></div>
   </div>
+
+
   <header>
     <nav>
-      <ul>
-        <li class="logo">
-          <div class="border-pfp">
-            <img src="statics/pfp.webp" alt="pfp test">
-          </div>
-        </li>
-      </ul>
+        <ul class="pfp">
+          <li class="logo">
+            <div class="border-pfp">
+              <img src="statics/pfp.webp" alt="pfp test">
+            </div>
+          </li>
+        </ul>
+        <ul class="mainControl">
+            <li><a>☗</a></li>
+            <li><a>✍</a></li>
+            <li><a>❔</a></li>
+        </ul>
+        <ul class="access">
+            <li><a>🔐</a></li>
+            <li><a>🔑</a></li>
+        </ul>
     </nav>
   </header>
+
+
   <div class="container-body">
-    <div id="grid">
+    <div class="grid">
       <div class="info-main">
-        <p></p>
-        <p>Test for domain host</p>
+        <p>🐱 ≽ܫ≼ 🐱</p>
       </div>
       <div class="info-main">
-        <p></p>
-        <p>Test for domain host</p>
-      </div>
+        <p>😸 ≽^•⩊•^≼ 😸</p>
+    </div>
       <div class="info-main">
-        <p></p>
-        <p>Test for domain host</p>
+        <p>😽 /ᐠ - ˕ -マ 😽</p>
       </div>
-      <div class="info-main">
-        <p></p>
-        <p>Test for domain host</p>
-      </div>
+  </div>
+  <div class="grid">
+    <div class="info-main">
+      <input type="number" class="evenInput" id="isEven">
+    </div>
+  </div>
+  <div class="grid">
+    <div class="top-output">
+      <h5>output:</h5>
     </div>
   </div>
 </body>
+  <script>
+    //dropdown menu 
+    const access = document.querySelector('.access');
+    //dropdown menu
+    access.addEventListener('click', () => {
+      console.log('click');
+    });
 
+    //check if even or odd 
+    const isEven = document.getElementById('isEven');
+    isEven.addEventListener('input', () => {
+      if (isEven.value % 2 == 0) {
+        console.log('even');
+      } else {
+        console.log('odd');
+      }
+    });
+  </script>
 </html>
