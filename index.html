@@ -21,23 +21,25 @@
 
 
   <header>
-    <nav>
-        <ul class="pfp">
-          <li class="logo">
-            <div class="border-pfp">
+    <nav class="topbar">
+        <div class="pfp topbarElements">
+            <li class="userPfp">
               <img src="statics/pfp.webp" alt="pfp test">
-            </div>
-          </li>
-        </ul>
-        <ul class="mainControl">
-            <li><a>☗</a></li>
-            <li><a>✍</a></li>
-            <li><a>❔</a></li>
-        </ul>
-        <ul class="access">
-            <li><a>🔐</a></li>
-            <li><a>🔑</a></li>
-        </ul>
+            </li>
+        </div>
+        <div class="mainControl topbarElements">
+          <div class="navItems">
+            <a>☗</a>
+            <a>✍</a>
+            <a>❔</a>
+          </div>
+        </div>
+        <div class="access topbarElements">
+          <div class="navItems">
+            <a>🔐</a>
+            <a>🔑</a>
+          </div>
+        </div>
     </nav>
   </header>
 
@@ -59,15 +61,21 @@
       <input type="number" class="evenInput" id="isEven">
     </div>
   </div>
-  <div class="grid">
-    <div class="top-output">
-      <h5>output:</h5>
+  <div class="grid-output">
+    <div class="info-output">
+      <div class="top-output">
+        <h3>⮛ OUTPUT ⮛</h3>
+      </div>
+      <div class="button-output" >
+      </div>
     </div>
   </div>
 </body>
   <script>
     //dropdown menu 
     const access = document.querySelector('.access');
+    const output = document.querySelector('.button-output');
+    const outputNumbers = output.querySelectorAll('p');
     //dropdown menu
     access.addEventListener('click', () => {
       console.log('click');
@@ -77,10 +85,24 @@
     const isEven = document.getElementById('isEven');
     isEven.addEventListener('input', () => {
       if (isEven.value % 2 == 0) {
-        console.log('even');
+        //write even in the output
+        output.innerHTML += '<p>true</p>';
+        deleteOutput();
       } else {
-        console.log('odd');
+        output.innerHTML += '<p>false</p>';
+        deleteOutput();
       }
     });
-  </script>
+    function deleteOutput() {
+      //delete the old output
+      console.log(outputNumbers.length);
+      if (outputNumbers.length > 10) {
+    // Remove all the paragraphs from the div
+    outputNumbers.forEach(outputNumbers => {
+      output.removeChild(outputNumbers);
+    }); }
+
+    }
+
+</script>
 </html>

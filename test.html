@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Grow to fill available space */
+    justify-content: flex-start; /* Align profile picture to the left */
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-links {
+    flex: 2; /* Grow to fill available space */
+    text-align: center;
+}
+
+.login-register {
+    flex: 1; /* Grow to fill available space */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-register a {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar > * {
+        margin: 5px;
+    }
+
+    .profile,
+    .login-register {
+        justify-content: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="profile">
+        <img src="profile.jpg" alt="Profile Picture">
+    </div>
+    <div class="nav-links">
+        <a href="#">Menu</a>
+        <a href="#">Logs</a>
+        <a href="#">FAQ</a>
+    </div>
+    <div class="login-register">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </div>
+</nav>
+
+</body>
+</html>
