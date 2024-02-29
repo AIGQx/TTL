@@ -74,8 +74,10 @@
   <script>
     //dropdown menu 
     const access = document.querySelector('.access');
+    const actualHour = new Date();
     const output = document.querySelector('.button-output');
-    const outputNumbers = output.querySelectorAll('p');
+    const actualtime =
+  actualHour.getHours() + ':' + actualHour.getMinutes().toString().padStart(2, '0');
     //dropdown menu
     access.addEventListener('click', () => {
       console.log('click');
@@ -86,20 +88,24 @@
     isEven.addEventListener('input', () => {
       if (isEven.value % 2 == 0) {
         //write even in the output
-        output.innerHTML += '<p>true</p>';
+        output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is even </p> </a>`;
         deleteOutput();
       } else {
-        output.innerHTML += '<p>false</p>';
+        output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is odd </p> </a>`;
         deleteOutput();
       }
     });
     function deleteOutput() {
       //delete the old output
-      console.log(outputNumbers.length);
-      if (outputNumbers.length > 10) {
+      const outputNumbers = output.querySelectorAll('a');
+
+      console.log(outputNumbers);
+      console.log(outputNumbers[0]);
+      if (outputNumbers.length > 5) {
     // Remove all the paragraphs from the div
     outputNumbers.forEach(outputNumbers => {
-      output.removeChild(outputNumbers);
+     //remove the first child
+     outputNumbers.remove(outputNumbers[0]);
     }); }
 
     }

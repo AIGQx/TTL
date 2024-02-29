@@ -8,7 +8,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   font-size: .8em;
   font-family: system-ui, sans-serif;
 }
@@ -216,7 +215,9 @@ header {
   flex: 1;
 
 }
-
+.logText{
+  display: inline-block;
+}
 .enInput {
   background-color: #F9B7B5;
   align-items: center;
@@ -236,11 +237,12 @@ header {
   -moz-appearance: textfield;
 }
 .grid-output{
+  color: #161A1E;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  background-color:#E5A3A1 ;
+  background-color:#ECE3B1 ;
   margin: 10px 1px 0;
   border-radius: 10px;
   justify-content: space-between;
@@ -251,10 +253,16 @@ header {
   margin: 10px; 
   text-align: center;
 }
+.miLog{
+  color: #22262A;
+}
 .button-output{
+  color: #161A1E;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 10px;
-  background-color: #F9B7B5;
+  background-color: #FFF7C5;
   padding: 10px;
   border-radius: 10px;
   text-shadow: 2px 2px 4px #565656;
@@ -267,12 +275,6 @@ header {
   width: 350px;
 }
 .button-output:hover{
-  background-color: #FFDEDE;
-  color: #6A4B5A;
-  padding: 10px;
-  border-radius: 40px;
-  text-shadow: 2px 2px 4px #563a3a;
-  transition:.4s;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -299,16 +301,16 @@ header {
   }
 
   .navItems {
-    padding: 9px;
+    padding: 15px;
     font-size: .9em;
-    gap: 15px;
+    gap: 20px;
 
   }
   header {
     width: 90%;
   }
   .navItems a {
-    padding: 1px;
+    padding: 5px;
   }
 }
 /* @media (min-width: 400px) {
