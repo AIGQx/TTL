@@ -218,7 +218,7 @@ header {
 .logText{
   display: inline-block;
 }
-.enInput {
+.evenInput {
   background-color: #F9B7B5;
   align-items: center;
   font-size: 1.6em;
@@ -311,6 +311,18 @@ header {
   }
   .navItems a {
     padding: 5px;
+  }
+}
+.fade-out{
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
   }
 }
 /* @media (min-width: 400px) {

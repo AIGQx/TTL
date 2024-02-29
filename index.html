@@ -76,39 +76,39 @@
     const access = document.querySelector('.access');
     const actualHour = new Date();
     const output = document.querySelector('.button-output');
-    const actualtime =
-  actualHour.getHours() + ':' + actualHour.getMinutes().toString().padStart(2, '0');
-    //dropdown menu
-    access.addEventListener('click', () => {
-      console.log('click');
-    });
-
-    //check if even or odd 
     const isEven = document.getElementById('isEven');
-    isEven.addEventListener('input', () => {
-      if (isEven.value % 2 == 0) {
-        //write even in the output
-        output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is even </p> </a>`;
-        deleteOutput();
-      } else {
-        output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is odd </p> </a>`;
-        deleteOutput();
+    const actualtime = actualHour.getHours() + ':' + actualHour.getMinutes().toString().padStart(2, '0');
+    
+    //check if even or odd 
+
+      isEven.addEventListener('keypress', () => {
+        if (event.key !== 'Enter') return;
+        if (isEven.value % 2 == 0) {
+          //write even in the output
+          output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is even </p> </a>`;
+          deleteOutput();
+        } else {
+          output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is odd </p> </a>`;
+          deleteOutput();
+        }
+      });
+      function deleteOutput() {
+        //delete the old output
+        const outputNumbers = output.querySelectorAll('a');
+
+        if (outputNumbers.length > 5) {
+          const elementsToRemove = outputNumbers.length - 5;
+          for (let i = 0; i < elementsToRemove; i++) {
+            if (outputNumbers[i]) {
+              outputNumbers[i].classList.add('fade-out');
+              outputNumbers[i].addEventListener('animationend', function () {
+                outputNumbers[i].remove();
+              });
+            }
+          }
+        }
+
       }
-    });
-    function deleteOutput() {
-      //delete the old output
-      const outputNumbers = output.querySelectorAll('a');
-
-      console.log(outputNumbers);
-      console.log(outputNumbers[0]);
-      if (outputNumbers.length > 5) {
-    // Remove all the paragraphs from the div
-    outputNumbers.forEach(outputNumbers => {
-     //remove the first child
-     outputNumbers.remove(outputNumbers[0]);
-    }); }
-
-    }
 
 </script>
 </html>
