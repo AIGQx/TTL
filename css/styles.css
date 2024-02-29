@@ -1,10 +1,9 @@
 @font-face {
   font-family: 'UnifontEx';
-  src: url('fonts/UnifontExMono.ttf') format('truetype');
+  src: url('../statics/fonts/UnifontExMono.woff2') format('truetype');
 }
 body {
   margin: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,10 +43,9 @@ header {
   margin: 5px;
 }
 .userPfp img {
-  height: 100%;
+  max-width: 75px;
   margin-left: 5%;
   width: 100%;
-  max-width: 75px;
   padding: 4.5px;
   border-radius: 100%;
   border-color: red;
@@ -128,14 +126,15 @@ header {
 }
 
 .info-main {
+  flex: 2;
+  font-family: 'UnifontEx';
+  font-size: 1.6em;
   background-color: #F9B7B5;
   color: #1B1F23;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
 }
 
 .info-main:hover {
@@ -150,14 +149,25 @@ header {
   transition:.4s;
   cursor: pointer;
 }
+.info-alt {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  align-items: center;
+}
+.info-alt img {
+  max-width: 100%;
+  border-radius: 10px;
 
+}
 .container-body {
   display: flex;
+  margin-top: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  width: 90%;
+  width: 75%;
 }
 
 .grid {
@@ -247,7 +257,13 @@ header {
   border-radius: 10px;
   justify-content: space-between;
   font-family: 'UnifontEx';
+  scrollbar-color: #322100 #FFF7C5;
   font-size: 1.2em;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: red;
 }
 .top-output{
   margin: 10px; 
@@ -257,6 +273,8 @@ header {
   color: #22262A;
 }
 .button-output{
+  max-height: 170px;
+  overflow: auto;
   color: #161A1E;
   display: flex;
   flex-direction: column;

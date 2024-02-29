@@ -46,19 +46,19 @@
 
   <div class="container-body">
     <div class="grid">
-      <div class="info-main">
-        <p>🐱 ≽ܫ≼ 🐱</p>
+      <div class="top-info">
+
       </div>
       <div class="info-main">
-        <p>😸 ≽^•⩊•^≼ 😸</p>
-    </div>
-      <div class="info-main">
-        <p>😽 /ᐠ - ˕ -マ 😽</p>
+        <h3>NOMBRE</h3>
+        <p>Aqui va la descripción que se necesite poner Aqui, customizar fuente, estilos etc </p>
+        <h3>DESCRIPCIÓN</h3>
+        <p>
+          por ejemplo: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
-  </div>
-  <div class="grid">
-    <div class="info-main">
-      <input type="number" class="evenInput" id="isEven">
+      <div class="info-alt">
+        <img src="/statics/main logo.png" alt="">
     </div>
   </div>
   <div class="grid-output">
@@ -69,6 +69,9 @@
       <div class="button-output" >
       </div>
     </div>
+    <div class="info-main">
+      <input type="number" class="evenInput" id="isEven">
+    </div>
   </div>
 </body>
   <script>
@@ -78,36 +81,42 @@
     const output = document.querySelector('.button-output');
     const isEven = document.getElementById('isEven');
     const actualtime = actualHour.getHours() + ':' + actualHour.getMinutes().toString().padStart(2, '0');
+    let lastEnterTimestamp = 0;
     
-    //check if even or odd 
-
       isEven.addEventListener('keypress', () => {
+        const currentTimestamp = Date.now();
+
         if (event.key !== 'Enter') return;
+        if (currentTimestamp - lastEnterTimestamp < 600) return;
+      
         if (isEven.value % 2 == 0) {
           //write even in the output
           output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is even </p> </a>`;
           deleteOutput();
+          lastEnterTimestamp = currentTimestamp;
         } else {
           output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is odd </p> </a>`;
           deleteOutput();
+          lastEnterTimestamp = currentTimestamp;
         }
       });
       function deleteOutput() {
         //delete the old output
         const outputNumbers = output.querySelectorAll('a');
 
-        if (outputNumbers.length > 5) {
-          const elementsToRemove = outputNumbers.length - 5;
+        if (outputNumbers.length > 10) {
+          const elementsToRemove = outputNumbers.length - 10;
           for (let i = 0; i < elementsToRemove; i++) {
             if (outputNumbers[i]) {
               outputNumbers[i].classList.add('fade-out');
               outputNumbers[i].addEventListener('animationend', function () {
                 outputNumbers[i].remove();
+                output.scrollTop = output.scrollHeight;
               });
             }
           }
         }
-
+              output.scrollTop = output.scrollHeight;
       }
 
 </script>
