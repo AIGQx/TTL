@@ -297,7 +297,7 @@ header {
 }
 @media (max-width: 768px) {
   .container-body {
-    width: 100%;
+    width: 95%;
     padding: 0 20px;
   }
 
@@ -330,6 +330,24 @@ header {
   .navItems a {
     padding: 5px;
   }
+.grid-output{
+  font-size: 1em;
+  width: 90%;
+}
+.top-output{
+  width: 100%;
+}
+.info-output{
+  width: 100%;
+}
+.button-output{
+  flex: 1;
+  max-height: 150px;
+  font-size: 1em;
+  width: 100%;
+}
+
+
 }
 .fade-out{
   animation-name: fadeOut;
