@@ -2,6 +2,14 @@
   font-family: 'UnifontEx';
   src: url('../statics/fonts/UnifontExMono.woff2') format('truetype');
 }
+
+@font-face {
+  font-family: 'azukiB';
+  src: url('../statics/fonts/azukiB.woff2') format('truetype');
+}
+html{
+  cursor: url(../statics/cursors/default.svg) 1 1, auto;
+}
 body {
   margin: 0;
   display: flex;
@@ -21,7 +29,7 @@ header {
   font-family: 'unifontEx';
   align-items: center;
   animation: gradient-animation 10s ease infinite;
-  background:  #FFDEDE;
+  background:  #ffdedeaa;
   background-size:1000% 1000%;
   border-radius: 80px;
   display: flex;
@@ -123,31 +131,38 @@ header {
   height: 100%;
   background: #F8E8EE;
   z-index: -1;
+  background-image: radial-gradient(#ffdede 3.5px, transparent 3.5px), radial-gradient(#ffdede 3.5px, transparent 3.5px);
+background-size: 50px 50px;
+background-position: 0 0, 25px 25px;
+background-color: #f8f9fa;
 }
 
 .info-main {
   flex: 2;
-  font-family: 'UnifontEx';
+  font-family: 'azukiB';
   font-size: 1.6em;
-  background-color: #F9B7B5;
-  color: #1B1F23;
+  background-color: #FFFFFF;
+  color: #866f6f;
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
+  transition: 0.4s;
   text-align: left;
 }
-
+.info-main h3 {
+  font-family: 'UnifontEx';
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: bold;
+}
 .info-main:hover {
-  background-color: #FFDEDE;
+  background-color: #ffedef;
   color: #6A4B5A;
   padding: 10px;
   border-radius: 40px;
   margin: 10px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
   transition:.4s;
-  cursor: pointer;
+  cursor:  url(../statics/cursors/pointer.svg) 10 10, pointer;;
 }
 .info-alt {
   flex: 1;
@@ -157,8 +172,10 @@ header {
   align-items: center;
 }
 .info-alt img {
-  max-width: 100%;
-  border-radius: 10px;
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
 
 }
 .container-body {
@@ -167,14 +184,14 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 60%;
 }
 
 .grid {
  display: flex;
  flex-wrap: wrap;
   align-items: center;
-  background-color:#E5A3A1 ;
+  background-color:#fadee1bd ;
   margin: 10px 1px 0;
   border-radius: 10px;
   justify-content: space-between;
@@ -206,7 +223,7 @@ header {
   color: #F8F9FA;
   text-shadow: 2px 2px 4px #563a3a;
   font-weight: bold;
-  cursor: pointer;
+  cursor:  url(../statics/cursors/pointer.svg) 10 10, pointer;;
   transition: .4s;
 }
 .navItems a:hover {
@@ -216,7 +233,7 @@ header {
   border-radius: 40px;
   text-shadow: 2px 2px 4px #563a3a;
   transition:.4s;
-  cursor: pointer;
+  cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
 }
 .access {
   font-size: 1.6em;
@@ -263,7 +280,6 @@ header {
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
-  background-color: red;
 }
 .top-output{
   margin: 10px; 
@@ -293,14 +309,16 @@ header {
   width: 350px;
 }
 .button-output:hover{
-  cursor: pointer;
+  cursor:  url(../statics/cursors/pointer.svg) 10 10, pointer;;
 }
 @media (max-width: 768px) {
   .container-body {
     width: 95%;
     padding: 0 20px;
   }
-
+  .grid {
+    flex-direction: column-reverse;
+  }
   .topbar {
     margin: 10px 0;
     padding: 5px;
@@ -317,7 +335,6 @@ header {
   .info-main {
     border-radius: 20px;
   }
-
   .navItems {
     padding: 15px;
     font-size: .9em;

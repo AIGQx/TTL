@@ -88,7 +88,13 @@
 
         if (event.key !== 'Enter') return;
         if (currentTimestamp - lastEnterTimestamp < 600) return;
-      
+      // verify if input is only numbers
+        if (isNaN(isEven.value)) {
+          output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is not a number </p> </a>`;
+          deleteOutput();
+          lastEnterTimestamp = currentTimestamp;
+          return;
+        }
         if (isEven.value % 2 == 0) {
           //write even in the output
           output.innerHTML += `<a> <h5 class="logText">> ${actualtime} </h5>: <p class="logText miLog">  ${isEven.value} is even </p> </a>`;
