@@ -479,6 +479,9 @@ background-color: #f8f9fa;
   
 }
 @media (max-width: 768px) {
+  .prev, .next {
+    font-size: 10px;
+  }
   .container-body {
     width: 90%;
     padding: 0 20px;
@@ -492,7 +495,7 @@ background-color: #f8f9fa;
   }
 
   .topbarElements {
-    gap: 5px;
+    gap: 4px;
   }
 
   .userPfp img {
@@ -507,13 +510,13 @@ background-color: #f8f9fa;
     border-radius: 20px;
   }
   .navItems {
-    padding: 15px;
+    padding: 15px 5px;
     font-size: .9em;
-    gap: 20px;
+    gap: 8px;
 
   }
   header {
-    width: 90%;
+    width: 95%;
   }
   .navItems a {
     padding: 6px;
