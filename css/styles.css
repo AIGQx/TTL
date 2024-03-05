@@ -369,6 +369,7 @@ object-fit: cover;
 .top-output {
   margin: 10px;
   text-align: center;
+  font-size: .9em;
 }
 
 .miLog {
@@ -488,9 +489,9 @@ object-fit: cover;
   }
 
   .navItems {
-    padding: 15px;
     font-size: 1.4em;
   }
+  
 
   .navItems a {
     padding: 6px;
@@ -623,7 +624,8 @@ object-fit: cover;
     padding: 6px;
   }
 
-  .grid-card {
+  .grid-container-card {
+    flex-flow: column;
     font-size: 1em;
     flex-direction: column;
 
@@ -636,6 +638,7 @@ object-fit: cover;
 
   .top-output {
     width: 100%;
+    font-size: 1em;
   }
 
   .info-output {
