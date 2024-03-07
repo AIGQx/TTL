@@ -225,11 +225,6 @@ header {
 .flex-3{
   flex:3;
 }
-.responsive-canvas{
-width: 100%;  
-object-fit: cover;
-
-}
 .grid-container-top {
   background-color: #fadee1bd;
   display: flex;
@@ -409,7 +404,7 @@ object-fit: cover;
   flex-wrap: wrap;
   align-items: center;
   background-color: #a3cbe7bd;
-
+  width: auto;
   margin: 10px 1px 0;
   border-radius: 10px;
   justify-content: space-between;
@@ -435,7 +430,67 @@ object-fit: cover;
   transition: .4s;
 
 }
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.6em;
+  background-color: #B7DFFB;
+  text-shadow: 2px 2px 4px #565656;
+  cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
+  ;
+  transition: .4s;
 
+}
+.project-card {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: #ffffff;
+  text-shadow: 2px 2px 4px #565656;
+  cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
+  ;
+  transition: .4s;
+}
+.top-project-card {
+  display: flex;
+  flex: 1;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.top-project-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.top-project-card p{
+  font-size: .9em;
+ position: absolute;
+ top: 70%;
+}
+.buttom-project-card {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  font-size: .8em;
+  flex: 1;
+}
+.buttom-project-card h1{
+  font-size: 1em;
+  text-align: center;
+}
+.icons-projects {
+  font-size: 1.6em;
+}
 .carousel {
   position: relative;
 }
@@ -473,39 +528,9 @@ object-fit: cover;
 
 }
 
-@media screen and (max-width: 1920px) {
-  .container-body {
-    width: 60%;
-  }
-
-  .info-alt img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .info-main {
-    font-size: 1.6em;
-  }
-
-  .navItems {
-    font-size: 1.4em;
-  }
-  
-
-  .navItems a {
-    padding: 6px;
-  }
-
-  .button-output {
-    max-height: 150px;
-    font-size: 1.4em;
-  }
-
-}
 
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
@@ -563,7 +588,6 @@ object-fit: cover;
 
 
 }
-
 @media (max-width: 770px) {
   .prev {
     left: 0;
@@ -620,12 +644,7 @@ object-fit: cover;
     flex-flow: column;
     font-size: 1em;
     flex-direction: column;
-
   }
-  .grid-container-card {
-    flex-direction: column;
-  }
-
   .grid-output {
     font-size: 1em;
     width: 100%;
@@ -656,7 +675,13 @@ object-fit: cover;
   .carousel-item img {
     width: 100%;
   }
-
+  .projects {
+    align-items: center;
+    flex-direction: column;
+  }
+  .project-card{
+    width: auto
+  }
 }
 
 .fade-out {
