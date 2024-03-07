@@ -437,7 +437,7 @@ header {
   background-color: #B7DFFB;
   text-shadow: 2px 2px 4px #565656;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
-  ;
+  font-family: 'UnifontEx';
   transition: .4s;
 
 }
