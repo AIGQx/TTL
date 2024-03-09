@@ -472,10 +472,18 @@ header {
   border-radius: 10px;
   object-fit: cover;
 }
-.top-project-card p{
+.subtextProject{
   font-size: .9em;
- position: absolute;
- top: 70%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 0px 10px 10px;
+  color: #eeeeee;
+  user-select: none;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 100%); 
+    width: 100%;
 }
 .buttom-project-card {
   position: relative;
@@ -487,9 +495,34 @@ header {
 .buttom-project-card h1{
   font-size: 1em;
   text-align: center;
+
 }
 .icons-projects {
   font-size: 1.6em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-shadow: none;
+}
+.icons-projects i {
+  background: -webkit-linear-gradient(225deg, #CDF0EA, #F9F9F9,             
+  #F6C6EA,#FAF4B7) 0% 0% / 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 5s ease 0s infinite normal none running gradient;
+  animation: gradient 5s ease infinite;  
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .carousel {
   position: relative;
