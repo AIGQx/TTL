@@ -423,7 +423,7 @@ header {
   padding: 10px;
   border-radius: 10px;
   font-size: 1.6em;
-  background-color: #B7DFFB;
+  background-color: #ffff;
   text-shadow: 2px 2px 4px #565656;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
   ;
@@ -434,7 +434,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.6em;
-  background-color: #B7DFFB;
+  background-color: #B4E3AD;
+  border-radius: 10px;
   text-shadow: 2px 2px 4px #565656;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
   font-family: 'UnifontEx';
@@ -498,19 +499,19 @@ header {
 
 }
 .icons-projects {
-  font-size: 1.6em;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4em;
+  margin: 10px;
   text-align: center;
   text-shadow: none;
 }
 .icons-projects i {
-  background: -webkit-linear-gradient(225deg, #CDF0EA, #F9F9F9,             
-  #F6C6EA,#FAF4B7) 0% 0% / 300% 300%;
-  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(0deg,#B4E3AD, #e4ffe1) 0% 0% / 1000% 1000%;
   -webkit-text-fill-color: transparent;
-  animation: 5s ease 0s infinite normal none running gradient;
-  animation: gradient 5s ease infinite;  
+  -webkit-background-clip: text;
+  animation: gradient 5S linear infinite;
 }
 
 @keyframes gradient {
@@ -524,10 +525,15 @@ header {
     background-position: 0% 50%;
   }
 }
+
 .carousel {
   position: relative;
 }
-
+.carousel-section {
+  background-color: #E2C0FCbd ;
+  border-radius: 10px;
+  padding: 10px;
+}
 .carousel-item img {
   display: flex;
   flex: 1;
@@ -535,8 +541,6 @@ header {
   justify-content: center;
   border-radius: 10px;
   font-size: 1.6em;
-  background-color: #FFF7C5;
-  text-shadow: 2px 2px 4px #565656;
   transition: .4s;
   width: 100%;
   object-fit: cover;
