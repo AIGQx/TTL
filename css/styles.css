@@ -234,7 +234,7 @@ header {
   align-items: center;
 }
 .grid-container-interactive {
-  background-color: #faf8debd;
+  background-color: #fadee1bd;
   display: flex;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -325,7 +325,7 @@ header {
   font-size: 1.6em;
   text-shadow: 2px 2px 4px #565656;
   font-family: 'UnifontEx';
-  background-color: #FFF7C5;
+  background-color: #ffffff;
   border: none;
   outline: none;
   text-align: center;
@@ -347,12 +347,11 @@ header {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  background-color: #ECE3B1;
+  background-color: #F7DAD9;
   margin: 10px 1px;
   border-radius: 10px;
   justify-content: space-between;
   font-family: 'UnifontEx';
-  scrollbar-color: #322100 #FFF7C5;
   font-size: 1.2em;
 }
 
@@ -379,7 +378,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-  background-color: #FFF7C5;
+  background-color: #fff;
   padding: 10px;
   border-radius: 10px;
   text-shadow: 2px 2px 4px #565656;
@@ -403,9 +402,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #a3cbe7bd;
+  background-color: #fadee1bd;
   width: auto;
-  margin: 10px 1px 0;
   border-radius: 10px;
   justify-content: space-between;
   font-family: 'UnifontEx';
@@ -434,7 +432,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.6em;
-  background-color: #B4E3AD;
+  background-color: #fadee1bd;
   border-radius: 10px;
   text-shadow: 2px 2px 4px #565656;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
@@ -453,7 +451,7 @@ header {
   padding: 10px;
   border-radius: 10px;
   width: 50%;
-  background-color: #ffffff;
+  background-color: #EEEFF0;
   text-shadow: 2px 2px 4px #565656;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
   ;
@@ -508,10 +506,10 @@ header {
   text-shadow: none;
 }
 .icons-projects i {
-  background: -webkit-linear-gradient(0deg,#B4E3AD, #e4ffe1) 0% 0% / 1000% 1000%;
+  background: -webkit-linear-gradient(150deg, #FFDEDE 25% , #EEEFF0 35%,#FFDEDE 60% , #EEEFF0 75%) 0% 0% / 300% 300%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: gradient 5S linear infinite;
+  animation:gradient 5s ease infinite ;
 }
 
 @keyframes gradient {
@@ -530,7 +528,7 @@ header {
   position: relative;
 }
 .carousel-section {
-  background-color: #E2C0FCbd ;
+  background-color: #fadee1bd ;
   border-radius: 10px;
   padding: 10px;
 }
