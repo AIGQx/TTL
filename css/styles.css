@@ -7,7 +7,9 @@
   font-family: 'azukiB';
   src: url('../statics/fonts/azukiB.woff2') format('truetype');
 }
-
+*{
+  -webkit-tap-highlight-color: transparent;
+}
 html {
   cursor: url(../statics/cursors/default.svg) 1 1, auto;
 }
@@ -242,6 +244,7 @@ header {
   justify-content: space-between;
 }
 .mainControl {
+  font-size: 1.6em;
   flex: 2;
   display: flex;
   justify-content: center;
@@ -421,9 +424,6 @@ header {
   background-color: #fadee1bd;
   border-radius: 10px;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
-  font-family: 'UnifontEx';
-  transition: .4s;
-
 }
 .project-card {
   display: flex;
