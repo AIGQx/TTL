@@ -11,6 +11,7 @@ const actualTime = actualHour.getHours() + ':' + actualHour.getMinutes().toStrin
 let lastEnterTimestamp = 0;
 let index = 0;
 updateCarousel();
+
 function updateCarousel() {
     carouselItems.forEach((item, i) => {
         if (i === index) {
@@ -37,7 +38,6 @@ function deleteOutput() {
     }
     output.scrollTop = output.scrollHeight;
 }
-
 isEven.addEventListener('keypress', () => {
     const currentTimestamp = Date.now();
     if (event.key !== 'Enter') return;
