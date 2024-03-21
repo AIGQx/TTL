@@ -14,20 +14,14 @@
 </head>
 
 <body>
-  <div id="background-container">
-    <video id="video-background" autoplay muted loop>
-      <source src="" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div id="overlay"></div>
-  </div>
+  <div id="overlay"></div>
   <header>
     <nav class="topbar">
-      <div class="pfp topbarElements">
+      <ul class="pfp topbarElements">
         <li class="userPfp">
           <img src="statics/test2.webp"  rel="preload" fetchPriority="high"  width="400" alt="pfp test">
         </li>
-      </div>
+      </ul>
       <div class="mainControl topbarElements">
         <div class="navItems">
           <a>☗</a>
@@ -114,11 +108,12 @@
               <div class="button-output">
               </div>
               <div class="input-checker">
-                <input type="number" class="evenInput" id="isEven">
+                <label for="isEven">Enter a number:</label>
+                <input type="number" class="evenInput" name="evenInput" id="isEven">
               </div>
             </div>
-
           </div>
+          
         </div>
       </div>
     </section>
