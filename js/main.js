@@ -40,7 +40,7 @@ function deleteOutput() {
 }
 isEven.addEventListener('keypress', () => {
     const currentTimestamp = Date.now();
-    if (event.key !== 'Enter') return;
+    if (key !== 'Enter') return;
     if (currentTimestamp - lastEnterTimestamp < 600) return;
     if (isEven.value === '') return;
     if (isEven.value % 2 == 0) {
@@ -63,7 +63,7 @@ prev.addEventListener('click', () => {
         carouselItems[index].classList.remove('imgtoright');
     }
     index = (index - 1 + carouselItems.length) % carouselItems.length;
-    carouselItems[index].classList.add('imgtoleft');
+    carouselItems[index].classList.add('imgtoeft');
     updateCarousel();
 });
 next.addEventListener('click', () => {
