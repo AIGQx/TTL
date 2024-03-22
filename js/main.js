@@ -8,11 +8,33 @@ const actualHour = new Date();
 const output = document.querySelector('.button-output');
 const isEven = document.getElementById('isEven');
 const actualTime = actualHour.getHours() + ':' + actualHour.getMinutes().toString().padStart(2, '0');
+const nextScrollButton = document.getElementById('nextSectionBtn');
+const prevScrollButton = document.getElementById('prevSectionBtn');
+const sections = document.querySelectorAll('section');
+let currentSectionIndex = 0;
 let lastEnterTimestamp = 0;
 let index = 0;
 updateCarousel();
+function scrollSection(direction) {
+    if (direction === 'prev') {
+        currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
+    } else {
+        currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+    }
+    sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    console.log(currentSectionIndex);
+}
+
+prevScrollButton.addEventListener('click', () => {
+    scrollSection('prev');
+});
+
+nextScrollButton.addEventListener('click', () => {
+    scrollSection('next');
+});
 
 function updateCarousel() {
+
     carouselItems.forEach((item, i) => {
         if (i === index) {
             item.style.display = 'block';

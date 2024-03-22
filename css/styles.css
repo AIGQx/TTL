@@ -29,7 +29,14 @@ header {
   width: 75%;
   z-index: 1000;
 }
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Take up the full viewport height */
 
+
+}
 .topbar {
   font-family: 'unifontEx';
   align-items: center;
@@ -194,10 +201,35 @@ header {
   border-radius: 100%;
 
 }
+.prevSection{
+  position: fixed;
+  top: 45%;
+  right: 2%;
+}
+.nextSection{
+  position: fixed;
+  top: 50%;
+  right: 2%;
+}
+.sectionBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F9B7B5;
+  color: #EEEFF0;
+  font-family: 'UnifontEx';
+  font-size: 1.4em;
+  transition: .4s;
+  border: none
+  ;
 
+}
 .container-body {
   display: flex;
-  margin-top: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -498,11 +530,7 @@ header {
 
 .carousel {
   position: relative;
-}
-.carousel-section {
-  background-color: #fadee1bd ;
-  border-radius: 10px;
-  padding: 10px;
+
 }
 .carousel-item img {
   display: flex;
@@ -535,7 +563,11 @@ header {
 
 }
 
-
+.bgcarousel{
+  padding: 20px;
+  background-color: #fadee1bd;
+  border-radius: 10px;
+}
 .prev,
 .next {
   position: absolute;
