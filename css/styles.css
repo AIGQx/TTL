@@ -71,6 +71,7 @@ section {
 .userPfp img {
   width: 75px;
   height: 75px;
+  aspect-ratio: 1/1;
   object-fit: cover;
   margin-left: 5%;
   padding: 4.5px;
@@ -209,10 +210,22 @@ section {
   top: 45%;
   right: 2%;
 }
+.prevSection svg{
+  width: 1.3em;
+  height: 1.3em;
+  fill: #ffffff;
+
+}
 .nextSection{
   position: fixed;
   top: 50%;
   right: 2%;
+}
+.nextSection svg{
+  width: 1.3em;
+  height: 1.3em;
+  rotate: 180deg;
+  fill: #ffffff;
 }
 .sectionBtn{
   display: flex;
@@ -298,6 +311,7 @@ section {
   background-color: #F9B7B5;
   fill: #F8F9FA;
   width: 1em;
+  height: 1em;
   text-shadow: 2px 2px 4px #563a3a;
   font-weight: bold;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
