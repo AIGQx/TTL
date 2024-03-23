@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'UnifontEx';
-  src: url('../statics/fonts/UnifontExMono.woff2') format('truetype');
+  src: url('../statics/fonts/UnifontExMono.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'azukiB';
-  src: url('../statics/fonts/azukiB.woff2') format('truetype');
+  src: url('../statics/fonts/azukifontB.woff2') format('woff2');
+  font-display: swap;
 }
 *{
   -webkit-tap-highlight-color: transparent;
@@ -196,6 +198,7 @@ section {
 
 .info-alt img {
   object-fit: cover;
+  aspect-ratio: 1/1;
   width: 400px;
   height: 400px;
   border-radius: 100%;
@@ -288,12 +291,13 @@ section {
 
 }
 
-.navItems a {
+.navItems svg {
   padding: 5px;
   user-select: none;
   border-radius: 10px;
   background-color: #F9B7B5;
-  color: #F8F9FA;
+  fill: #F8F9FA;
+  width: 1em;
   text-shadow: 2px 2px 4px #563a3a;
   font-weight: bold;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
@@ -301,9 +305,9 @@ section {
   transition: .4s;
 }
 
-.navItems a:hover {
+.navItems svg:hover {
   background-color: #F8E8EE;
-  color: black;
+  fill: black;
   padding: 5px;
   border-radius: 40px;
   transition: .4s;
