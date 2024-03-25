@@ -209,6 +209,7 @@ section {
   position: fixed;
   top: 45%;
   right: 2%;
+  margin-bottom: 10px;
 }
 .prevSection svg{
   width: 1.3em;
@@ -220,6 +221,7 @@ section {
   position: fixed;
   top: 50%;
   right: 2%;
+  margin-top: 10px;
 }
 .nextSection svg{
   width: 1.3em;
