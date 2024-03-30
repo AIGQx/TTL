@@ -16,19 +16,9 @@ let lastEnterTimestamp = 0;
 let index = 0;
 updateCarousel();
 function scrollSection(direction) {
-    if (direction === 'prev') {
-        currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
-    } else {
-        currentSectionIndex = (currentSectionIndex + 1) % sections.length;
-    }
+    currentSectionIndex = 1;
     sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-    console.log(currentSectionIndex);
 }
-
-prevScrollButton.addEventListener('click', () => {
-    scrollSection('prev');
-});
-
 nextScrollButton.addEventListener('click', () => {
     scrollSection('next');
 });
