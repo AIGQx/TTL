@@ -12,6 +12,8 @@
 * 
 {
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+
 }
 html {
   scroll-behavior: smooth;
@@ -26,7 +28,9 @@ body {
   font-size: .8em;
   font-family: system-ui, sans-serif;
 }
-
+section{
+  width: 100%;
+}
 header {
   position: fixed;
   top: 0;
@@ -217,8 +221,8 @@ header {
 .info-alt img {
   object-fit: cover;
   aspect-ratio: 1/1;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
 
 }
@@ -248,20 +252,32 @@ header {
   transition: .4s;
   border: none;
 }
-
-.container-body {
+.testcet{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 65%;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
-
+.container-body {
+  width: 65%;
+  position: absolute;
+  z-index: 1; /* Ensure the content stays above the top bar */
+  margin-top: 75px; /* Adjust to match the top bar height */
+  max-height: calc(100vh - 118px);/* Set max-height to fill the remaining viewport space */
+  overflow-y: auto; /* Allow scrolling even when content height is reduced */
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+.container-body::-webkit-scrollbar {
+  display: none; /* Webkit */
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: 10px 1px;
+  width: 100%;
 }
 
 .flex-1 {
@@ -283,6 +299,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .grid-container-interactive {
@@ -466,7 +483,7 @@ header {
   font-family: 'uniFontEx';
   font-size: 2.8em;
   text-align: center;
-  margin: 100px auto 10px;
+  margin: auto;
   padding: 10px;
   border-radius: 10px;
   background-color: #fadee1bd;
@@ -488,7 +505,7 @@ header {
 
 }
 .projects {
-  margin: 10px 100px;
+  margin: 50px 100px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -504,7 +521,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 50px;
   padding: 10px;
   border-radius: 10px;
   background-color: #EEEFF0;
@@ -730,6 +747,7 @@ header {
 
   .info-main {
     border-radius: 20px;
+    font-size: 2em;
   }
 
   .navItems {
@@ -790,9 +808,6 @@ header {
   .projects {
     align-items: center;
     margin: 20px auto;
-  }
-  .project-card {
-    margin: 0;
   }
 }
 
