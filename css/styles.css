@@ -9,13 +9,12 @@
   src: url('../statics/fonts/azukifontB.woff2') format('woff2');
   font-display: swap;
 }
-
-* {
+* 
+{
   -webkit-tap-highlight-color: transparent;
-
 }
-
 html {
+  scroll-behavior: smooth;
   cursor: url(../statics/cursors/default.svg) 1 1, auto;
 }
 
@@ -43,6 +42,14 @@ header {
   /* Take up the full viewport height */
 
 
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
 }
 
 .topbar {
@@ -216,11 +223,14 @@ header {
 
 }
 .nextSection {
-  position: relative;
   display: flex;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
+
+}
+.nextSectionBtn {
+  animation: slideUp 10s ease;
 }
 .nextSection svg {
   width: 1.3em;
@@ -237,7 +247,6 @@ header {
   font-size: 1.4em;
   transition: .4s;
   border: none;
-
 }
 
 .container-body {
@@ -245,7 +254,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 65%;
 }
 
 .grid {
@@ -448,7 +457,22 @@ header {
   justify-content: space-between;
   font-family: 'UnifontEx';
 }
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionTitle{
+  font-family: 'uniFontEx';
+  font-size: 2.8em;
+  text-align: center;
+  margin: 100px auto 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fadee1bd;
+  color: #866f6f;
 
+}
 .card {
   display: flex;
   flex: 1;
@@ -464,8 +488,10 @@ header {
 
 }
 .projects {
+  margin: 10px 100px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   background-color: #fadee1bd;
   border-radius: 10px;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
@@ -481,7 +507,6 @@ header {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  width: 50%;
   background-color: #EEEFF0;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
   transition: .4s;
@@ -584,15 +609,15 @@ header {
   object-fit: cover;
 }
 
-.imgtoright {
-  animation: fadeinimg 1s;
+.itemToRight {
+  animation: fadeInImg 1s;
 }
 
-.imgtoleft {
-  animation: fadeinimg 1s;
+.itemToLeft {
+  animation: fadeInImg 1s;
 }
 
-@keyframes fadeinimg {
+@keyframes fadeInImg {
   from {
     opacity: 0;
   }
@@ -612,6 +637,7 @@ header {
 .prev,
 .next {
   position: absolute;
+  z-index: 7;
   top: 50%;
   width: auto;
   padding: 16px;
@@ -757,14 +783,16 @@ header {
   .carousel-item img {
     width: 100%;
   }
-
+  .sectionTitle{
+    font-size: 2em;
+    margin: auto;
+  }
   .projects {
     align-items: center;
-    flex-direction: column;
+    margin: 20px auto;
   }
-
   .project-card {
-    width: auto
+    margin: 0;
   }
 }
 
