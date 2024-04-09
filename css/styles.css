@@ -231,12 +231,14 @@ header {
   align-items: center;
   margin-top: 5%;
   width: 100%;
+  rotate: 180deg;
 
 }
 .nextSectionBtn {
   animation: slideUp 10s ease;
 }
 .nextSection svg {
+  
   width: 1.3em;
   height: 1.3em;
   rotate: 180deg;
@@ -252,7 +254,7 @@ header {
   transition: .4s;
   border: none;
 }
-.testcet{
+.content{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -608,7 +610,9 @@ header {
     background-position: 0% 50%;
   }
 }
-
+.carousel-section {
+  margin-top: 50px;
+}
 .carousel {
   position: relative;
 
@@ -647,6 +651,7 @@ header {
 
 .bgcarousel {
   padding: 20px;
+  margin: 50px 0px;
   background-color: #fadee1bd;
   border-radius: 10px;
 }
@@ -718,6 +723,7 @@ header {
   }
 
   .container-body {
+    margin-top: 62px;
     width: 90%;
     padding: 0 20px;
   }
@@ -741,13 +747,13 @@ header {
   }
 
   .info-alt img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
 
   .info-main {
     border-radius: 20px;
-    font-size: 2em;
+    font-size: 1.6em;
   }
 
   .navItems {
