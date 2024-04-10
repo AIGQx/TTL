@@ -21,37 +21,51 @@
   <div id="overlay"></div>
   <header>
     <nav class="topbar">
-      <ul class="pfp topbarElements">
+        <ul class="pfp topbarElements">
         <li class="userPfp">
           <img src="statics/test2.webp" fetchPriority="low" alt="pfp test">
         </li>
       </ul>
       <div class="mainControl topbarElements">
         <div class="navItems">
+          <button id="homeBtn" class="itemBtn">
           <svg viewBox="0 0 20.6 24.4">
             <path fill-rule="evenodd" stroke="none" stroke-linecap="round" stroke-width="0"
               d="M1.9 9.4H0v15h20.6v-15h-1.9V7.5H17V5.6H15V3.8h-1.9v-2h-1.8V0h-2v1.9H7.6v1.9H5.6v1.8H3.8v1.9h-2v1.9Z" />
           </svg>
+          </button>
+          <button id="worksBtn" class="itemBtn">
           <svg viewBox="0 0 16.9 18.8">
             <path fill-rule="evenodd" stroke="none" stroke-linecap="round" stroke-width="0"
               d="M15 13.1h1.9v-1.8H13V13h-1.8V15h-2V7.5h2V5.6H13V0h-1.8v1.9h-2V0H7.6v1.9H5.6V0H3.8v5.6h1.8v1.9h1.9V15H5.6v-1.9H3.8v-1.8H0V13h1.9V15h1.9v1.9h1.8v1.9h5.7v-2H13V15H15v-1.9Z" />
           </svg>
+          </button>
+          <button id="faqBtn" class="itemBtn">
           <svg viewBox="0 0 16.9 28.1">
             <path fill-rule="evenodd" stroke="none" stroke-linecap="round" stroke-width="0"
               d="M7.5 11.3H5.6v7.4h3.8v-5.6h1.8v-1.8H15v-2h1.9V3.8H15V2h-3.8V0H5.7v1.9H2v1.9H0v5.6h3.8V5.6h3.7V3.8h3.8v1.8H13v1.9H9.4v1.9H7.5v1.8ZM9.4 28v-1.9h1.8v-3.7H9.4v-1.9H5.6v1.9H3.8v3.8h1.8V28h3.8Z" />
           </svg>
+          </button>
         </div>
       </div>
       <div class="access topbarElements">
         <div class="navItems">
-          <svg viewBox="0 0 30 24.38">
-            <path
-              d="M11.25 22.5h1.88v1.88h3.74V22.5H15v-1.88h-1.88v-1.87H15v1.88h1.88v1.87h1.87V15h-1.88v1.88h-3.75V15H9.38v-1.88h1.88V22.5Zm-1.88-9.38H7.5v-7.5h1.88V3.75h1.87v1.88H9.37v7.5Zm11.26 0h1.87v-7.5h-3.75V3.75h1.88V13.13Zm-9.38-9.37V1.87h7.5v1.88h-7.5ZM0 9.38h3.75V7.5H0v1.88Zm26.25 0H30V7.5h-3.75v1.88Zm0 7.5h1.88V15h-1.88v1.88Zm0-1.88h-1.88v-1.88h1.88V15Zm-22.5 0h1.88v-1.88H3.75V15Zm-1.88 0h1.88v1.88H1.87V15ZM3.75 3.75h1.88V1.87H3.75v1.88Zm0-1.88H1.87V0h1.88v1.88Zm22.5 0h1.88V0h-1.88v1.88Zm-1.88 0h1.88v1.88h-1.88V1.87ZM18.75 15h1.88v-1.88h-1.88V15Z" />
-          </svg>
+          <button id="theme-switch" class="itemBtn">
+            <svg viewBox="0 0 30 24.38">
+              <path
+                d="M11.25 22.5h1.88v1.88h3.74V22.5H15v-1.88h-1.88v-1.87H15v1.88h1.88v1.87h1.87V15h-1.88v1.88h-3.75V15H9.38v-1.88h1.88V22.5Zm-1.88-9.38H7.5v-7.5h1.88V3.75h1.87v1.88H9.37v7.5Zm11.26 0h1.87v-7.5h-3.75V3.75h1.88V13.13Zm-9.38-9.37V1.87h7.5v1.88h-7.5ZM0 9.38h3.75V7.5H0v1.88Zm26.25 0H30V7.5h-3.75v1.88Zm0 7.5h1.88V15h-1.88v1.88Zm0-1.88h-1.88v-1.88h1.88V15Zm-22.5 0h1.88v-1.88H3.75V15Zm-1.88 0h1.88v1.88H1.87V15ZM3.75 3.75h1.88V1.87H3.75v1.88Zm0-1.88H1.87V0h1.88v1.88Zm22.5 0h1.88V0h-1.88v1.88Zm-1.88 0h1.88v1.88h-1.88V1.87ZM18.75 15h1.88v-1.88h-1.88V15Z" />
+            </svg>
+          </button>
+          <div class="dropdownThemes">
+            <a>Light</a>
+            <a>Dark</a>
+          </div>
+          <button id="loginBtn" class="itemBtn">
           <svg viewBox="0 0 18.8 10">
             <path
               d="M7.5 10V8.7h1.3V7.5H10V6.2h2.5v1.3H15V6.2h1.3v1.3h2.4V3.7H10V2.5H8.7V1.2H7.5V0h-5v1.3H1.2v1.2H0v5h1.3v1.3h1.2V10h5ZM5 6.2H2.5V3.8H5v2.5Z" />
           </svg>
+          </button>
         </div>
     </nav>
   </header>
@@ -61,7 +75,7 @@
       <div class="grid">
         <div class="grid-container-top">
           <div class="info-main">
-            <h3 class="X">THIS</h3>
+            <h3>THIS</h3>
             <h3>IS</h3>
             <H3>AN SAMPLE</H3>
             <H3>FOR WEB DEVELOPMENT</H3>
@@ -72,7 +86,7 @@
         </div>
         <div class="nextSection">
           <a href="#contentMain" id="nextSectionBtn" class="sectionBtn">
-<svg viewBox="0 0 43.75 25"><g id="svgGroup"><path d="M 37.5 6.25 L 43.75 6.25 L 43.75 0 L 37.5 0 L 37.5 6.25 Z M 31.25 6.25 L 37.5 6.25 L 37.5 12.5 L 31.25 12.5 L 31.25 6.25 Z M 31.25 12.5 L 31.25 18.75 L 25 18.75 L 25 12.5 L 31.25 12.5 Z M 25 18.75 L 25 25 L 18.75 25 L 18.75 18.75 L 25 18.75 Z M 18.75 18.75 L 12.5 18.75 L 12.5 12.5 L 18.75 12.5 L 18.75 18.75 Z M 12.5 12.5 L 6.25 12.5 L 6.25 6.25 L 12.5 6.25 L 12.5 12.5 Z M 6.25 6.25 L 0 6.25 L 0 0 L 6.25 0 L 6.25 6.25 Z"/></g></svg>
+          <svg viewBox="0 0 43.75 25"><g id="svgGroup"><path d="M 37.5 6.25 L 43.75 6.25 L 43.75 0 L 37.5 0 L 37.5 6.25 Z M 31.25 6.25 L 37.5 6.25 L 37.5 12.5 L 31.25 12.5 L 31.25 6.25 Z M 31.25 12.5 L 31.25 18.75 L 25 18.75 L 25 12.5 L 31.25 12.5 Z M 25 18.75 L 25 25 L 18.75 25 L 18.75 18.75 L 25 18.75 Z M 18.75 18.75 L 12.5 18.75 L 12.5 12.5 L 18.75 12.5 L 18.75 18.75 Z M 12.5 12.5 L 6.25 12.5 L 6.25 6.25 L 12.5 6.25 L 12.5 12.5 Z M 6.25 6.25 L 0 6.25 L 0 0 L 6.25 0 L 6.25 6.25 Z"/></g></svg>
           </a>
         </div>
       </div>
@@ -230,5 +244,4 @@
 </div>
 </body>
 <script src="./js/main.js"></script>
-
 </html>

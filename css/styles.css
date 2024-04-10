@@ -9,14 +9,17 @@
   src: url('../statics/fonts/azukifontB.woff2') format('woff2');
   font-display: swap;
 }
-* 
-{
+:root{
+  --primary-color: #F9B7B5;
+  --secondary-color: #F8E8EE;
+  --tertiary-color: #F7DAD9;
+}
+* {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  }
 
-}
 html {
-  scroll-behavior: smooth;
   cursor: url(../statics/cursors/default.svg) 1 1, auto;
 }
 
@@ -37,15 +40,19 @@ header {
   width: 75%;
   z-index: 1000;
 }
-
+.itemBtn{
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+border: none;
+}
 .mainInfo-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* Take up the full viewport height */
-
-
 }
 @keyframes slideUp {
   from {
@@ -167,13 +174,9 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #F8E8EE;
+  background: #ffffff;
   z-index: -1;
   background-color: #EEEFF0;
-  opacity: 0.8;
-  background: radial-gradient(circle, transparent 20%, #EEEFF0 20%, #EEEFF0 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #EEEFF0 20%, #EEEFF0 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#ffdede 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #ffdede 2px, #EEEFF0 2px) -1px 0;
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
-
 }
 
 .info-main {
@@ -249,7 +252,7 @@ header {
   margin: auto;
   padding: 10px;
   border-radius: 10px;
-  background-color: #F9B7B5;
+  background-color: var(--primary-color);
   font-size: 1.4em;
   transition: .4s;
   border: none;
@@ -264,15 +267,15 @@ header {
 .container-body {
   width: 65%;
   position: absolute;
-  z-index: 1; /* Ensure the content stays above the top bar */
-  margin-top: 75px; /* Adjust to match the top bar height */
-  max-height: calc(100vh - 118px);/* Set max-height to fill the remaining viewport space */
-  overflow-y: auto; /* Allow scrolling even when content height is reduced */
+  z-index: 1; 
+  margin-top: 75px;
+  max-height: calc(100vh - 118px);
+  overflow-y: auto; 
   overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 .container-body::-webkit-scrollbar {
-  display: none; /* Webkit */
+  display: none;
 }
 .grid {
   display: flex;
@@ -340,15 +343,28 @@ header {
   border-radius: 10px;
   background-color: #F9B7B5;
   fill: #F8F9FA;
-  width: 1em;
-  height: 1em;
+  width: 2em;
+  height: 2em;
   text-shadow: 2px 2px 4px #563a3a;
   font-weight: bold;
   cursor: url(../statics/cursors/pointer.svg) 10 10, pointer;
   ;
   transition: .4s;
 }
-
+.dropdownThemes{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 95%;
+  font-size: 0.5em;
+  background-color: #fadee1bd;
+  padding: 10px;
+  border-radius: 15px;
+}
+.dropdownThemes a{
+text-decoration: none;
+margin: 5px;
+}
 .navItems svg:hover {
   background-color: #F8E8EE;
   fill: black;
